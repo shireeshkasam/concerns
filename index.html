@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+box-sizing: border-box;
+}
+h1 {
+text-align: center;
+}
+.outer-grid {
+display: flex;
+flex-wrap: wrap;
+padding: 0 4px;
+}
+.inner-grid {
+flex: 25%;
+max-width: 7%;
+padding: 0 4px;
+}
+.inner-grid img {
+margin-top: 8px;
+width: 100%;
+padding: 10px;
+}
+@media screen and (max-width: 800px) {
+.inner-grid {
+flex: 50%;
+max-width: 50%;
+}
+}
+@media screen and (max-width: 600px) {
+.inner-grid {
+flex: 100%;
+max-width: 100%;
+}
+}
+ .blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+}
+#overlay    {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(240, 169, 169, 0.8);
+    z-index: 999;
+} 
+</style>
+<script>
+
+    var myBlurFunction = function(state) {
+    /* state can be 1 or 0 */
+    var containerElement = document.getElementById('main_container');
+    var overlayEle = document.getElementById('overlay');
+
+    if (state) {
+        overlayEle.style.display = 'block';
+        containerElement.setAttribute('class', 'blur');
+    } else {
+        overlayEle.style.display = 'none';
+        containerElement.setAttribute('class', null);
+    }
+};
+</script>
+<body>
+<h3 class="outer-grid">Skin Concerns</h3>
+<div class="outer-grid">
+<div class="inner-grid" >
+<a href="javascript:myBlurFunction(0)"><img src="https://cdn.yellowmessenger.com/fcBBrZmWTrAX1614229133852.png"/></a>
+ <img src="https://cdn.yellowmessenger.com/fcBBrZmWTrAX1614229133852.png"/>
+ <img src="https://cdn.yellowmessenger.com/v8W7xTuCrvK51614229197886.png"/>
+<img src="https://cdn.yellowmessenger.com/5uHjTEGRGeQi1614229242565.png"/>
+</div>
+<div class="inner-grid">
+<img src="https://cdn.yellowmessenger.com/sMZB4PDQZLXL1614229276705.png"/>
+<img src="https://cdn.yellowmessenger.com/bmablxeUpfEv1614229307504.png"/>
+<img src="https://cdn.yellowmessenger.com/jN3N0dL2huJC1614229364281.png"/>
+</div>
+<div class="inner-grid">
+<img src="https://cdn.yellowmessenger.com/uiLFk0px5yg91614229431672.png"/>
+<img src="https://cdn.yellowmessenger.com/MrO8v25qMEnP1614229466860.png"/>
+<img src="https://cdn.yellowmessenger.com/mQ6atNDDHZTM1614229504744.png"/>
+</div>
+</div>
+</body>
+</html>
+
+<!-- texture = `https://cdn.yellowmessenger.com/fcBBrZmWTrAX1614229133852.png`
+dryness = `https://cdn.yellowmessenger.com/v8W7xTuCrvK51614229197886.png`
+pigmentation = `https://cdn.yellowmessenger.com/5uHjTEGRGeQi1614229242565.png`
+acne = `https://cdn.yellowmessenger.com/sMZB4PDQZLXL1614229276705.png`
+dullness = `https://cdn.yellowmessenger.com/bmablxeUpfEv1614229307504.png`
+aging = `https://cdn.yellowmessenger.com/jN3N0dL2huJC1614229364281.png`
+open = `https://cdn.yellowmessenger.com/Z7TmPj4nKDsN1614229403882.png`
+oiliness = `https://cdn.yellowmessenger.com/uiLFk0px5yg91614229431672.png`
+sensitivity = `https://cdn.yellowmessenger.com/MrO8v25qMEnP1614229466860.png`
+brightening = `https://cdn.yellowmessenger.com/mQ6atNDDHZTM1614229504744.png` -->
+
